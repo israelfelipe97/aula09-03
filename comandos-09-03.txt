@@ -1,0 +1,274 @@
+
+1900940@Sala21819 MINGW64 /c
+$ merge.git
+bash: merge.git: command not found
+
+1900940@Sala21819 MINGW64 /c
+$ https://github.com/israelfelipe97/aula09-03.git
+bash: https://github.com/israelfelipe97/aula09-03.git: No such file or directory
+
+1900940@Sala21819 MINGW64 /c
+$ git https://github.com/israelfelipe97/aula09-03.git
+error: cannot spawn git-https://github.com/israelfelipe97/aula09-03.git: Invalid argument
+
+1900940@Sala21819 MINGW64 /c
+$ git clone https://github.com/israelfelipe97/aula09-03.git
+Cloning into 'aula09-03'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+1900940@Sala21819 MINGW64 /c
+$ dir
+$Recycle.Bin                        õ=
+Arquivos\ de\ Programas             pagefile.sys
+asuinstall.log                      PerfLogs
+aula09-03                           Program\ Files
+Boot                                Program\ Files\ (x86)
+bootmgr                             ProgramData
+BOOTSECT.BAK                        Recovery
+Dev-Cpp                             Ruby193
+Documents\ and\ Settings            System\ Volume\ Information
+HashiCorp                           Users
+levantamento\ Hardware\ Python\ v3  Windows
+MSOCache                            Windows\ Enabler
+msvcr71.dll
+
+1900940@Sala21819 MINGW64 /c
+$ cd aula09-03
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ ls
+README.md
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ vim Readme.md
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ git add Readme.md
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ git pull
+From https://github.com/israelfelipe97/aula09-03
+ * [new branch]      branch1    -> origin/branch1
+Already up to date.
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ git checkout branch1
+Switched to a new branch 'branch1'
+M       README.md
+Branch 'branch1' set up to track remote branch 'branch1' from 'origin'.
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git checkout master
+Switched to branch 'master'
+M       README.md
+Your branch is up to date with 'origin/master'.
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ git checkout branch1
+Switched to branch 'branch1'
+M       README.md
+Your branch is up to date with 'origin/branch1'.
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ vim README.md
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git status
+On branch branch1
+Your branch is up to date with 'origin/branch1'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git commit -m "segunda alteracao"
+[branch1 10953a6] segunda alteracao
+ Committer: Israel Felipe Eduardo da Silva <1900940@SALAS.AULAS>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git commit -m "segunda alteracao" README.md
+On branch branch1
+Your branch is ahead of 'origin/branch1' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git status
+On branch branch1
+Your branch is ahead of 'origin/branch1' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git push README.md
+
+fatal: invalid gitfile format: README.md
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git push
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/israelfelipe97/aula09-03.git
+   480774c..10953a6  branch1 -> branch1
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ dir
+main.py  main.py.txt  README.md
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git add main.py
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git commit -m "upload python file"
+[branch1 311325a] upload python file
+ Committer: Israel Felipe Eduardo da Silva <1900940@SALAS.AULAS>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+)
+ create mode 100644 main.py
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git status
+On branch branch1
+Your branch is ahead of 'origin/branch1' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main.py.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git add main.py
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git status
+On branch branch1
+Your branch is ahead of 'origin/branch1' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 375 bytes | 375.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/israelfelipe97/aula09-03.git
+   10953a6..311325a  branch1 -> branch1
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ git merge branch2
+merge: branch2 - not something we can merge
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ git merge branch1
+Updating 480774c..311325a
+Fast-forward
+ README.md | 4 +++-
+ main.py   | 4 ++++
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+ create mode 100644 main.py
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$ ^C
+
+1900940@Sala21819 MINGW64 /c/aula09-03 (master)
+$
